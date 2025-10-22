@@ -16,14 +16,14 @@ intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # -------------------- JSON Utilities --------------------
-def load_data(load_profile=False):
+def  load_data(load_profile=False):
     path = 'data/profiles.json' if load_profile else 'data/data.json' # toggle between loading data & profiles
     with open(path, 'r') as i:
         data = json.load(i)
     return data
 
 def save_data(data, save_profile=False):
-    path = 'data/profiles.json' if save_profile else 'data/data.json' # toggle between saving in data & profiles
+    path = 'data/profiles.json' if save_profile else 'data/data.json' # toggle between saving in data and profiles
     with open(path, 'w') as i:
         json.dump(data, i, indent=4)
 
